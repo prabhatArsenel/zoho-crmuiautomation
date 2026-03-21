@@ -1,0 +1,5 @@
+pages\loginpage.class
+utils\Waitutils.class
+base\basepage.class
+factory\driverFactory.class
+utils\configreader.class

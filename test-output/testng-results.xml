@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-03-17T13:26:52 IST" name="Automation Suite" finished-at="2026-03-17T13:27:28 IST" duration-ms="35214">
+    <groups>
+    </groups>
+    <test started-at="2026-03-17T13:26:52 IST" name="Google Test" finished-at="2026-03-17T13:27:28 IST" duration-ms="35214">
+      <class name="test.create_lead">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.create_lead@3a52dba3]" started-at="2026-03-17T13:26:52 IST" name="setup" finished-at="2026-03-17T13:26:58 IST" duration-ms="5269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="login()[pri:0, instance:test.create_lead@3a52dba3]" started-at="2026-03-17T13:26:58 IST" name="login" finished-at="2026-03-17T13:27:02 IST" duration-ms="3966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="create_lead()[pri:0, instance:test.create_lead@3a52dba3]" started-at="2026-03-17T13:27:02 IST" name="create_lead" finished-at="2026-03-17T13:27:08 IST" duration-ms="6615" status="FAIL">
+          <exception class="org.openqa.selenium.InvalidSelectorException">
+            <message>
+              <![CDATA[invalid selector: Unable to locate an element with the xpath expression //Span[contains(text(),'CRM')])[2] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//Span[contains(text(),'CRM')])[2]' is not a valid XPath expression.
+  (Session info: chrome=145.0.7632.162)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dab0df806b850d11bfd8f6331f175786, findElement {value=//Span[contains(text(),'CRM')])[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.162, chrome: {chromedriverVersion: 145.0.7632.160 (662e0d7961b..., userDataDir: C:\Users\pk179\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56773}, goog:processID: 12308, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56773/devtoo..., se:cdpVersion: 145.0.7632.162, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dab0df806b850d11bfd8f6331f175786]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //Span[contains(text(),'CRM')])[2] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//Span[contains(text(),'CRM')])[2]' is not a valid XPath expression.
+  (Session info: chrome=145.0.7632.162)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dab0df806b850d11bfd8f6331f175786, findElement {value=//Span[contains(text(),'CRM')])[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.162, chrome: {chromedriverVersion: 145.0.7632.160 (662e0d7961b..., userDataDir: C:\Users\pk179\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56773}, goog:processID: 12308, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56773/devtoo..., se:cdpVersion: 145.0.7632.162, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dab0df806b850d11bfd8f6331f175786
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:795)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:788)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:207)
+at utils.Waitutils.waitForElementClickable(Waitutils.java:23)
+at pages.create_leadpge.click_crm(create_leadpge.java:76)
+at test.create_lead.create_lead(create_lead.java:16)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_lead -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:test.create_lead@3a52dba3]" started-at="2026-03-17T13:27:09 IST" name="logout" finished-at="2026-03-17T13:27:10 IST" duration-ms="1538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.create_lead@3a52dba3]" started-at="2026-03-17T13:27:10 IST" name="tearDown" finished-at="2026-03-17T13:27:11 IST" duration-ms="409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.create_lead -->
+      <class name="test.edit_profile">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.edit_profile@2925bf5b]" started-at="2026-03-17T13:27:11 IST" name="setup" finished-at="2026-03-17T13:27:15 IST" duration-ms="4889" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="login()[pri:0, instance:test.edit_profile@2925bf5b]" started-at="2026-03-17T13:27:15 IST" name="login" finished-at="2026-03-17T13:27:19 IST" duration-ms="3129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="edit_profileme()[pri:0, instance:test.edit_profile@2925bf5b]" started-at="2026-03-17T13:27:19 IST" name="edit_profileme" finished-at="2026-03-17T13:27:27 IST" duration-ms="8404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- edit_profileme -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:test.edit_profile@2925bf5b]" started-at="2026-03-17T13:27:27 IST" name="logout" finished-at="2026-03-17T13:27:27 IST" duration-ms="316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.edit_profile@2925bf5b]" started-at="2026-03-17T13:27:27 IST" name="tearDown" finished-at="2026-03-17T13:27:28 IST" duration-ms="305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.edit_profile -->
+    </test> <!-- Google Test -->
+  </suite> <!-- Automation Suite -->
+</testng-results>
