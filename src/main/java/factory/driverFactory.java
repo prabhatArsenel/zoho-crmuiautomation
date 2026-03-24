@@ -34,10 +34,12 @@ public class driverFactory {
             options.addArguments("--disable-blink-features=AutomationControlled");
 
             // ⭐ MOST IMPORTANT FIX
-            options.addArguments("--user-data-dir=C:\\temp\\chrome-profile");
+            String threadName = Thread.currentThread().getName().replaceAll("[^a-zA-Z0-9]", "");
+            String profilePath = "C:\\temp\\chrome-profile-" + threadName;
 
+            options.addArguments("--user-data-dir=" + profilePath);
             // Optional for Jenkins
-            options.addArguments("--headless=new");
+            //options.addArguments("--headless=new");
 
             driver.set(new ChromeDriver(options));  // 👈 only this line changed
         }
