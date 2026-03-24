@@ -1,23 +1,33 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven'
+    }
+
     stages {
         stage('Build') {
             steps {
-                echo 'Building the project...'
+                bat 'mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
+                bat 'mvn test'
             }
         }
+    }
 
-        stage('Deploy') {
-            steps {
-                echo 'Deploying application...'
-            }
+    post {
+        always {
+            echo 'Pipeline execution completed'
+        }
+        success {
+            echo 'Build SUCCESS ✅'
+        }
+        failure {
+            echo 'Build FAILED ❌'
         }
     }
 }
