@@ -22,7 +22,7 @@ public class driverFactory {
         if (browser.equalsIgnoreCase("chrome")) {
 
             // ✅ ADD THIS (manual driver path)
-            System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver-win64\\chromedriver.exe ");
 
             ChromeOptions options = new ChromeOptions();
 
