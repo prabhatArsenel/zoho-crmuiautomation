@@ -50,7 +50,11 @@
 		</dependency>
 		<!-- Source:
 		https://mvnrepository.com/artifact/org.webjars.npm/webdriver-manager -->
-		
+	<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.8.0</version>
+</dependency>	
 <dependency>
  <groupId>com.aventstack</groupId>
  <artifactId>extentreports</artifactId>
