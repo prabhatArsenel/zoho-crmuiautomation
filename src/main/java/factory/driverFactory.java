@@ -4,7 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import io.github.bonigarcia.wdm.WebDriverManager;   // ✅ ADD THIS
+// ❌ REMOVE THIS
+// import io.github.bonigarcia.wdm.WebDriverManager;
 
 import utils.configreader;
 
@@ -20,12 +21,8 @@ public class driverFactory {
 
         if (browser.equalsIgnoreCase("chrome")) {
 
-            // ❌ REMOVE THIS (causing version mismatch)
-            // System.setProperty("webdriver.chrome.driver",
-            //        "C:\\Program Files\\chromdriver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-
-            // ✅ ADD THIS (auto-manages correct driver)
-            WebDriverManager.chromedriver().setup();
+            // ✅ ADD THIS (manual driver path)
+            System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
 
             ChromeOptions options = new ChromeOptions();
 
@@ -38,13 +35,11 @@ public class driverFactory {
             options.addArguments("--disable-gpu");
             options.addArguments("--disable-blink-features=AutomationControlled");
 
-            // ✅ Unique profile per thread (already correct)
+            // ✅ Keep your thread-safe profile logic
             String threadName = Thread.currentThread().getName().replaceAll("[^a-zA-Z0-9]", "");
             String profilePath = "C:\\temp\\chrome-profile-" + threadName;
 
             options.addArguments("--user-data-dir=" + profilePath);
-
-            // ❌ Keep headless OFF for Zoho
 
             driver.set(new ChromeDriver(options));
         }
