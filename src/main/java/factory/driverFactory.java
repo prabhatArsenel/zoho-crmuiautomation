@@ -36,6 +36,10 @@ public class driverFactory {
             options.addArguments("--disable-gpu");
             options.addArguments("--disable-blink-features=AutomationControlled");
 
+         // ✅ ADD THESE 3 LINES HERE
+            options.addArguments("--remote-debugging-port=9222");
+            options.addArguments("--disable-extensions");
+            options.addArguments("--disable-notifications");
             // ✅ Keep your thread-safe profile logic
             String threadName = Thread.currentThread().getName().replaceAll("[^a-zA-Z0-9]", "");
             String profilePath = "C:\\temp\\chrome-profile-" + threadName;
