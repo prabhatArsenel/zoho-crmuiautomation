@@ -26,17 +26,20 @@ public class edit_profilepage extends basepage {
     WebElement savebu;
 
     public void click_edit() {
+    	wait.waitForElementVisible(edit);
         wait.waitForElementClickable(edit);
         edit.click();
     }
 
     public void Enter_lastname(String last) {
+    	wait.waitForElementVisible(lastname);
         wait.waitForElementVisible(lastname);
         lastname.clear();
         lastname.sendKeys(last);
     }
 
     public void save_profile() {
+    	wait.waitForElementVisible(savebu);
         wait.waitForElementClickable(savebu);
         savebu.click();
     }

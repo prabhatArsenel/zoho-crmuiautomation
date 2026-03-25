@@ -21,11 +21,15 @@ public class logoutpage extends basepage {
 	
 	
 	public void profileicon() {
+		wait.waitForElementVisible(profileicon);
 		wait.waitForElementClickable(profileicon);
+		scrollToElement(profileicon);
 		profileicon.click();
 	}
 	public void logout() {
+		wait.waitForElementVisible(signout);
 		wait.waitForElementClickable(signout);
+		scrollToElement(signout);
 		signout.click();
 	}
 }

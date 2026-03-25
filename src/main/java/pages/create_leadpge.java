@@ -56,7 +56,9 @@ public class create_leadpge extends basepage {
 	public void icon_click() {
 		//System.out.println("Hello_prabhat");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		wait.waitForElementVisible(presentation_icon);
 		wait.waitForElementClickable(presentation_icon);
+		scrollToElement(presentation_icon);
 		//System.out.println("Hello_prabhat");
 		presentation_icon.click();
 	}
@@ -73,7 +75,9 @@ public class create_leadpge extends basepage {
 	    String parentWindow = driver.getWindowHandle();
 
 	    // Click CRM icon
+	    wait.waitForElementVisible(CRM);
 	    wait.waitForElementClickable(CRM);
+	    scrollToElement(CRM);
 	    CRM.click();
 
 	    // Wait until new window appears
@@ -94,19 +98,30 @@ public class create_leadpge extends basepage {
 	}
 	
 	public void Search_leads(String text) {
+		wait.waitForElementVisible(search_sales);
 		wait.waitForElementClickable(search_sales);
+		scrollToElement(search_sales);
 		search_sales.click();
 		search_sales.sendKeys(text);
+		wait.waitForElementVisible(lead);
 		wait.waitForElementClickable(lead);
+		scrollToElement(lead);
 		lead.click();
 	}
 	public void create_lead(String compny,String last_nam) {
+		wait.waitForElementVisible(create_lead);
 		wait.waitForElementClickable(create_lead);
+		scrollToElement(create_lead);
 		create_lead.click();
 		wait.waitForElementVisible(company);
+		wait.waitForElementVisible(company);
+		scrollToElement(company);
 		company.sendKeys(compny);
 		wait.waitForElementVisible(Last_name);
+		wait.waitForElementClickable(Last_name);
+		scrollToElement(Last_name);
 		Last_name.sendKeys("last_name");
+		wait.waitForElementVisible(save);
 		wait.waitForElementClickable(save);
 		save.click();
 	}

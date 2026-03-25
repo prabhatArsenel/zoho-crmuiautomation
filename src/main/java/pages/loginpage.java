@@ -31,26 +31,36 @@ public class loginpage extends basepage {
 
     public void enterUsername(String user) {
         wait.waitForElementVisible(username);
+        wait.waitForElementClickable(username);
+        scrollToElement(username);
         username.sendKeys(user);
     }
 
     public void Click_nextbutton() {
         wait.waitForElementClickable(nextbutton);
         nextbutton.click();
+        
     }
 
     public void Eyeicon_click() {
+    	wait.waitForElementVisible(eyeIcon);
         wait.waitForElementClickable(eyeIcon);
+        scrollToElement(eyeIcon);
         eyeIcon.click();
     }
 
     public void enterPassword(String pass) {
+    	
         wait.waitForElementVisible(password);
+        wait.waitForElementClickable(password);
+        scrollToElement(password);
         password.sendKeys(pass);
     }
 
     public void clickLogin() {
+    	wait.waitForElementVisible(loginBtn);
         wait.waitForElementClickable(loginBtn);
+        scrollToElement(loginBtn);
         loginBtn.click();
     }
 

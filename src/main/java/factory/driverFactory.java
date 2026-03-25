@@ -26,7 +26,12 @@ public class driverFactory {
         			"C:\\Drivers\\chromedriver-win64\\chromedriver.exe");
 
             ChromeOptions options = new ChromeOptions();
-
+            
+            options.addArguments("--headless");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--no-sandbox");
+            
             options.addArguments("--remote-allow-origins=*");
             options.addArguments("--disable-web-security");
             options.addArguments("--allow-running-insecure-content");
